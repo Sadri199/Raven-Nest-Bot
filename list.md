@@ -2,15 +2,15 @@
 
 ## First Part
 
-- [ ] Class with certain stuff:
-    - [ ]  Random Reward, calculate advance and final payment.
-    - [ ]  Random Subject, character and/or Organization.
+- [x] Class with certain stuff:
+    - [x]  Random Reward, calculate advance and final payment.
+    - [x]  Random Subject, character and/or Organization.
         - [ ]  Make a DB (MySQL?) for all the characters and their pictures.
         - [ ]  Learn how to read the info from the DB and put it into the Script.
-    - [ ]  Locations, fictional and real.
+    - [x]  Locations, fictional and real.
         - [ ]  Make a DB for all locations and their pictures.
 
-- [ ]  List all possible actions/verbs for a mission.
+- [x]  List all possible actions/verbs for a mission.
 - [ ]  Hardcode mission text for each action.
 - [ ]  Try to make this work!
 
