@@ -11,8 +11,8 @@
         - [ ]  Make a DB for all locations and their pictures.
 
 - [x]  List all possible actions/verbs for a mission.
-- [ ]  Hardcode mission text for each action.
-- [ ]  Try to make this work!
+- [x]  Hardcode mission text for each action.
+- [x]  Try to make this work!
 
 ## Second Part
 
