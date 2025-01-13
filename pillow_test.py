@@ -21,13 +21,13 @@ def image_make_1 ():
     draw_reward = ImageDraw.Draw(image_1) #Instance to be able to add Reward
 
     # Define the text properties
-    font_title = ImageFont.truetype("Perfect DOS VGA 437 Win.ttf", 26) #The size is in pixels
+    font_title = ImageFont.truetype("Perfect DOS VGA 437 Win.ttf", 36) #The size is in pixels
     text_title = new_mission.main_merge #I should try wrapping the text or making it smaller
-    position_title = (120,480)
+    position_title = (120,475)
 
-    font_reward = ImageFont.truetype("Perfect DOS VGA 437 Win.ttf", 30) #The size is in pixels
+    font_reward = ImageFont.truetype("Perfect DOS VGA 437 Win.ttf", 40) #The size is in pixels
     text_reward = new_mission.reward
-    position_reward = (699,480)
+    position_reward = (670,475)
 
     text_color_1 = (255,202,114) #RGB, so 0,0,0 is Black, 255,255,255 is White. 255,202,114 is the specific color of that yellowish font.
 
@@ -56,10 +56,10 @@ def image_make_2():
     position_req = (378,405)
 
     text_advance = new_mission.advance
-    position_advance = (378,458)
+    position_advance = (378,456)
 
     text_success = new_mission.success
-    position_success = (378,506)
+    position_success = (378,504)
 
     text_color_2 = (186,185,185)
 
@@ -74,32 +74,34 @@ def image_make_2():
 #################Second Template#################
 
 #################Third Template#################
+def image_make_3():
+    
+    image_3 = Image.open("templates/third_template.png")
 
+    draw_brief = ImageDraw.Draw(image_3) #Instance to be able to add Mission Brief
 
+    font_third =  ImageFont.truetype("Perfect DOS VGA 437 Win.ttf", 43)
 
-image_3 = Image.open("templates/third_template.png")
+    text_brief = new_mission.mission_text
+    wrapped = mission_wrapper(text_brief)
+    #wrapped = textwrap.wrap(text_brief)
+    position_brief = (50,435)
+    text_color_3 = (184,184,184)
 
-draw_brief = ImageDraw.Draw(image_3) #Instance to be able to add Mission Brief
+    draw_brief.text(position_brief, wrapped, font=font_third, fill=text_color_3, anchor="ls") #(image_width, image_height)
+    #draw_brief.multiline_text(position_brief, wrapped, font=font_third, fill=text_color_3)
 
-font_third =  ImageFont.truetype("Perfect DOS VGA 437 Win.ttf", 43)
-
-text_brief = new_mission.mission_text
-wrapped = mission_wrapper(text_brief)
-#wrapped = textwrap.wrap(text_brief)
-position_brief = (50,435)
-text_color_3 = (184,184,184)
-
-draw_brief.text(position_brief, wrapped, font=font_third, fill=text_color_3, anchor="ls") #(image_width, image_height)
-#draw_brief.multiline_text(position_brief, wrapped, font=font_third, fill=text_color_3)
-
-filename_3 = str(datetime.date.today()) + "_third" + ".png" #I prefer to use the current date as a filename.
-image_3.save(filename_3)
-
+    filename_3 = str(datetime.date.today()) + "_third" + ".png" #I prefer to use the current date as a filename.
+    image_3.save(filename_3)
+    
+    print(image_3.format,image_3.size,image_3.mode)
 #################Third Template#################
+
+#Configure fourth template!
 
 #################Test#################
 meme_1 = image_make_1()
 meme_2 = image_make_2()
+meme_3 = image_make_3()
 
-print(image_3.format,image_3.size,image_3.mode)
 #################Test#################
