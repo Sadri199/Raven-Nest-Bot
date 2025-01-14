@@ -1,1 +1,9 @@
+certifi==2024.12.14
+charset-normalizer==3.4.1
+defusedxml==0.7.1
+idna==3.10
 mysql-connector-python==9.1.0
+olefile==0.47
+pillow==11.1.0
+requests==2.32.3
+urllib3==2.3.0
