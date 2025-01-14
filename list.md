@@ -16,11 +16,11 @@
 
 ## Second Part
 
-- [ ]  Casually learn Pillow
-- [ ]  Try to make a template based on AC1 mission brief.
-    - [ ]  Find what font is used.
-- [ ]  Try to make edit random text into this images.
-- [ ]  Try to edit the real text into this images.
+- [x]  Casually learn Pillow
+- [x]  Try to make a template based on AC1 mission brief.
+    - [x]  Find what font is used.
+- [x]  Try to make edit random text into this images.
+- [x]  Try to edit the real text into this images.
 
 ## Third Part
 
