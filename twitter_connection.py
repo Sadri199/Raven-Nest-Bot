@@ -51,8 +51,6 @@ processTweet = makeTweet()
 
 #########Twitter#########
 
-#Bluesky here
-
 #########Test#########
 
 #########Test#########

@@ -27,8 +27,10 @@
 - [x]  Casually learn how to use Twitter and Bluesky APIs.
 - [x]  Try to make a dummy POST request.
     - [x]  Learn how to make API Requests via Python.
-- [ ]  Make a bot account for each place.
+- [x]  Make a bot account for each place.
      - [x]  Make it work in Twitter (thanks Tweepy)
-     - [ ]  Learn how to make API Requests via Python. 
+     - [x]  Learn how to make API Requests to Bluesky. 
 - [ ]  Make an automated Post.
     - [ ]  Figure out how to automate the execution of all of this???
+- [x]  Make a pinned FAQ post that explains the gimmick and the decisions taken, also next steps.
+- [ ]  Make a readme.md for Github.
