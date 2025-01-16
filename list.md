@@ -9,7 +9,6 @@
         - [ ]  Learn how to read the info from the DB and put it into the Script.
     - [x]  Locations, fictional and real.
         - [ ]  Make a DB for all locations and their pictures.
-
 - [x]  List all possible actions/verbs for a mission.
 - [x]  Hardcode mission text for each action.
 - [x]  Try to make this work!
@@ -28,9 +27,11 @@
 - [x]  Try to make a dummy POST request.
     - [x]  Learn how to make API Requests via Python.
 - [x]  Make a bot account for each place.
-     - [x]  Make it work in Twitter (thanks Tweepy)
-     - [x]  Learn how to make API Requests to Bluesky. 
+     - [x]  Make it work in Twitter (thanks Tweepy).
+     - [x]  Learn how to make API Requests to Bluesky (thanks Atproto). 
 - [ ]  Make an automated Post.
     - [ ]  Figure out how to automate the execution of all of this???
+            - [x]  Erase previous files from OS.
+            - [ ]  Learn how to use schedule.
 - [x]  Make a pinned FAQ post that explains the gimmick and the decisions taken, also next steps.
 - [ ]  Make a readme.md for Github.

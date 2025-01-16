@@ -1,11 +1,11 @@
 import random
 
 #################Data#################
-act_char = ['Raven Test: "x"','Stop "x"','Remove "x"','Rescue "x"','Pursuit "x"','Guard "x"','Destroy "x"','Raven Battle: "x"','Attack "x"','Eliminate "x"','Disrupt "x"','Protect "x"','Capture "x"','Intercept "x"','Assist "x"']
+act_char = ['Raven Test:"x"','Stop "x"','Remove "x"','Rescue "x"','Pursuit "x"','Guard "x"','Destroy "x"','Raven Battle:"x"','Attack "x"','Eliminate "x"','Disrupt "x"','Protect "x"','Capture "x"','Intercept "x"','Assist "x"']
 
 act_org = ['Mop Up "x"','Nullify "x"','Chase "x"','Obstruct "x"','Secure "x"','Help "x"']
 
-act_loc = ['Recon "x"','Detain "x"','Preserve "x"','Regain "x" ','Infiltrate "x"','Search in "x"','Defend "x"','Retake "x"','Observe "x"','Assault "x"','Enter "x"']
+act_loc = ['Recon "x"','Hinder "x"','Preserve "x"','Regain "x" ','Infiltrate "x"','Search in "x"','Defend "x"','Retake "x"','Observe "x"','Assault "x"','Enter "x"']
 
 objective_list = ["Goku (Mid)", "Shadow the Hedgehog", "Dorothy (Nikke)", "Hustler-1", "Nemo (AC)", "Gohan Calvo", "Rena Hirose"] #Can't be longer than 14 characters!
 
@@ -165,7 +165,7 @@ class Mission (Details):
         
         def missionMaker():
             text_definer = self.main_title
-            if text_definer == 'Raven Test: "x"':
+            if text_definer == 'Raven Test:"x"':
                 brief = f"This is the only test we give to people who want to become a Raven. You must battle against the opponent {self.main_char} and survive. If you survive, you will be considered a Raven. That's all. Good luck."
                 condition = f"Win the battle."
                 return brief, condition
@@ -193,7 +193,7 @@ class Mission (Details):
                 brief = f"Terrible news just came in. {self.main_char} has gotten hold of the giant space cannon! The weapon is certain to seal the fate of the world if it is fired at {self.main_loc} now. Go to space and stop them!"
                 condition = f"Eliminate the target."
                 return brief, condition
-            elif text_definer == 'Raven Battle: "x"':
+            elif text_definer == 'Raven Battle:"x"':
                 brief = f"Come participate in an AC battle that {self.main_req} will be holding over the next few days. This event pits {self.main_char} in an AC-to-AC battle where the winner takes it all."
                 condition = f"Beat the Opponent."
                 return brief, condition
@@ -253,8 +253,8 @@ class Mission (Details):
                 brief = f"Our intelligence has determined that {self.main_char} has an underground factory in the snowy region of {self.main_loc}.Your mission is to find the point of entry and destroy the door lock system."
                 condition = f"Find the entry point."
                 return brief, condition
-            elif text_definer == 'Detain "x"':
-                brief = f"We have decided to carry out an operation intended to occupy {self.main_char}'s base of activities in {self.main_loc}. Our First Division has already begun fighting. Your mission is to support the our troops."
+            elif text_definer == 'Hinder "x"':
+                brief = f"We have decided to carry out an operation intended to occupy {self.main_char}'s base of activities in {self.main_loc}. Our First Division has already begun fighting. Your mission is to support our troops."
                 condition = f"Assault the base."
                 return brief, condition
             elif text_definer =='Preserve "x"':
@@ -290,7 +290,7 @@ class Mission (Details):
                 condition = f"Invade the data center."
                 return brief, condition
             elif text_definer == 'Enter "x"':
-                brief = f"The {self.main_loc} Waste-Treatment Plant has been commandeered by {self.main_char} group of armed terrorists. Remove the forces occupying the facility."
+                brief = f"The {self.main_loc} Waste-Treatment Plant has been commandeered by {self.main_char}'s group of armed terrorists. Remove the forces occupying the facility."
                 condition = f"Repulse the intruders."
                 return brief, condition
             else:
@@ -304,9 +304,6 @@ class Mission (Details):
         super().__str__()  
         return f"Objective: {self.main_merge}           Reward: {self.reward}CRequester: {self.main_req}Advance: {self.advance}CUpon success: {self.success}C{self.mission_text}Theatre of Operation: {self.main_loc}Enemy forces: {self.extra_enemies} Condition of Success: {self.condition}"
         #return self.main_merge, self.reward, self.main_req, self.advance, self.success, self.mission_text, self.main_loc, self.extra_enemies
-#################Mission Brief#################
-
-#decide what to do with "Condition of Success"
 
 #################Test#################
 

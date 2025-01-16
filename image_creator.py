@@ -4,9 +4,8 @@ import datetime
 import textwrap
 
 #################General Information#################
-new_mission = Mission()
-
-print(new_mission.main_merge)
+#new_mission = Mission()
+#print(new_mission.main_merge)
 
 def mission_wrapper(text):
     wrapped = textwrap.fill(text, width=32)
@@ -14,20 +13,20 @@ def mission_wrapper(text):
 #################General Information#################
 
 #################First Template#################
-def image_make_1 ():
+def image_make_1 (new_mission):
     image_1 = Image.open("ac1_templates/first_template.png") #open a pic
 
     draw_title = ImageDraw.Draw(image_1) #Instance to be able to add Mission Title
     draw_reward = ImageDraw.Draw(image_1) #Instance to be able to add Reward
 
     # Define the text properties
-    font_title = ImageFont.truetype("ac1_templates/Perfect DOS VGA 437 Win.ttf", 36) #The size is in pixels
+    font_title = ImageFont.truetype("ac1_templates/Perfect DOS VGA 437 Win.ttf", 35) #The size is in pixels
     text_title = new_mission.main_merge #I should try wrapping the text or making it smaller
-    position_title = (117,475)
+    position_title = (116,475)
 
-    font_reward = ImageFont.truetype("ac1_templates/Perfect DOS VGA 437 Win.ttf", 40) #The size is in pixels
+    font_reward = ImageFont.truetype("ac1_templates/Perfect DOS VGA 437 Win.ttf", 39) #The size is in pixels
     text_reward = new_mission.reward
-    position_reward = (672,475)
+    position_reward = (678,475)
 
     text_color_1 = (255,202,114) #RGB, so 0,0,0 is Black, 255,255,255 is White. 255,202,114 is the specific color of that yellowish font.
 
@@ -42,7 +41,7 @@ def image_make_1 ():
 #################First Template#################
 
 #################Second Template#################
-def image_make_2():
+def image_make_2(new_mission):
 
     image_2 = Image.open("ac1_templates/second_template.png")
 
@@ -74,7 +73,7 @@ def image_make_2():
 #################Second Template#################
 
 #################Third Template#################
-def image_make_3():
+def image_make_3(new_mission):
     
     image_3 = Image.open("ac1_templates/third_template.png")
 
@@ -97,7 +96,7 @@ def image_make_3():
     print(image_3.format,image_3.size,image_3.mode)
 #################Third Template#################
 
-def image_make_4():
+def image_make_4(new_mission):
     
     image_4 = Image.open("ac1_templates/fourth_template.png")
 
@@ -133,8 +132,5 @@ def image_make_4():
     
     print(image_4.format,image_4.size,image_4.mode)
 #################Test#################
-meme_1 = image_make_1()
-meme_2 = image_make_2()
-meme_3 = image_make_3()
-meme_4 = image_make_4()
+
 #################Test#################

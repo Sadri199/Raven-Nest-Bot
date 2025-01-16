@@ -31,7 +31,7 @@ def blueskyPost():
 
     client.login(user,secret)
 
-    new_post = client.send_images(text="Test, test. Do you copy me, Raven? Can you see this mission?", images=pic_list)
+    new_post = client.send_images(text='A new mission is available, Raven. Type "Yes" to accept or "No" to decline it.', images=pic_list)
     url = new_post.uri #If everything works fine, here i can see the URI of the post.
     return url
 
