@@ -34,4 +34,4 @@
             - [x]  Erase previous files from OS.
             - [x]  Learn how to use schedule.
 - [x]  Make a pinned FAQ post that explains the gimmick and the decisions taken, also next steps.
-- [ ]  Make a readme.md for Github.
+- [x]  Make a readme.md for Github.
