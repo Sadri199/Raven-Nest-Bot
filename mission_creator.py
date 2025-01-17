@@ -7,15 +7,18 @@ act_org = ['Mop Up "x"','Nullify "x"','Chase "x"','Obstruct "x"','Secure "x"','H
 
 act_loc = ['Recon "x"','Hinder "x"','Preserve "x"','Regain "x" ','Infiltrate "x"','Search in "x"','Defend "x"','Retake "x"','Observe "x"','Assault "x"','Enter "x"']
 
-objective_list = ["Goku (Mid)", "Shadow the Hedgehog", "Dorothy (Nikke)", "Hustler-1", "Nemo (AC)", "Gohan Calvo", "Rena Hirose"] #Can't be longer than 14 characters!
+objective_list = ["Goku (Mid)", "Shadow the Hedgehog", "Dorothy (Nikke)", "Hustler-1", "Nemo (AC)", "Gohan Calvo", "Rena Hirose (AC)", "Asterix", "Obelix", "Leos Klein", "Stinger", "Scarface (AC)", "Malcolm (UT)", "Abyssal Dision "] #Can't be longer than 20 characters!
 
-organization_list = ["Raven's Nest", "Emeraude", "Chrome", "Murakumo Millenium", "PROGTECH", "Neucom", "Liandri", "Twitch Staff", "Global Cortex", "Chemical-Dyne", "Struggle", "UPEO"] #Can't be longer than 14 characters!
+organization_list = ["Raven's Nest", "Emeraude", "Chrome", "Murakumo Millenium", "PROGTECH", "Neucom", "Liandri", "Twitch Staff", "Global Cortex", "Chemical-Dyne", "Struggle", "UPEO", "General Resource", "Zio Matrix", "Crest", "Mirage", "Kisaragi"] #Can't be longer than 20 characters!
 
-requester_list = ["Goku (Mid)", "Vargskelethor", "Miles 'Tails' Prower", "Dorothy (Nikke)", "Hustler-1", "Raven's Nest", "Emeraude", "Chrome", "Murakumo Millenium", "PROGTECH", "Neucom", "Liandri", "Sugar (Nikke)", "Twitch Staff", "Global Cortex", "Chemical-Dyne", "Struggle", "Neromatsu"]
+requester_list = ["Vargskelethor", "Miles 'Tails' Prower", "Sugar (Nikke)", "Neromatsu", "Billy Kid (ZZZ)"] #Can't be longer than 20 characters!
+requester_list.extend(objective_list)
+requester_list.extend(organization_list)
+#print(requester_list)
 
-extra_enemies = ["MT", "Stinger", "Nine Ball", "Rapture (Nikke)", "Gun Hunter (Sonic)", "Frieza Soldier", "Saibaman", "R-101"]
+extra_enemies = ["MT", "Stinger", "Nine Ball", "Rapture (Nikke)", "Gun Hunter (Sonic)", "Frieza Soldier", "Saibaman", "R-101", "Su-37"]
 
-locations = ["Montevideo", "Kame House", "Space Colony ARK", "The Ark (Nikke)", "Zam City", "Isaac City"] #Can't be longer than 14 characters!
+locations = ["Montevideo", "Kame House", "Space Colony ARK", "The Ark (Nikke)", "Zam City", "Isaac City", "Eusian Ocean", "Megafloat (AC)", "Vihul Spaceport", "Zio Matrix's HQ", "Murakumo Dome", "PROGTECH Factory", "Amber Crown", "Trene City", "Arena", "Ruglen Lab"] #Can't be longer than 16 characters!
 
 #################Data#################
 

@@ -29,9 +29,9 @@
 - [x]  Make a bot account for each place.
      - [x]  Make it work in Twitter (thanks Tweepy).
      - [x]  Learn how to make API Requests to Bluesky (thanks Atproto). 
-- [ ]  Make an automated Post.
-    - [ ]  Figure out how to automate the execution of all of this???
+- [x]  Make an automated Post.
+    - [x]  Figure out how to automate the execution of all of this???
             - [x]  Erase previous files from OS.
-            - [ ]  Learn how to use schedule.
+            - [x]  Learn how to use schedule.
 - [x]  Make a pinned FAQ post that explains the gimmick and the decisions taken, also next steps.
 - [ ]  Make a readme.md for Github.
