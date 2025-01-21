@@ -104,7 +104,7 @@ def image_make_4(new_mission):
     draw_final_ext = ImageDraw.Draw(image_4)
     draw_cond_success = ImageDraw.Draw(image_4)
 
-    font_final =  ImageFont.truetype("ac1_templates/Perfect DOS VGA 437 Win.ttf", 43)
+    font_final =  ImageFont.truetype("ac1_templates/Perfect DOS VGA 437 Win.ttf", 42)
     
     text_location = new_mission.main_loc
     position_location = (161,456) #?
@@ -118,7 +118,7 @@ def image_make_4(new_mission):
     else:
         extra_color = text_color_final 
         
-    position_extras = (380,504)
+    position_extras = (350,504)
     
     text_cond_success = new_mission.condition 
     position_cond_success = (161,604)
@@ -132,5 +132,10 @@ def image_make_4(new_mission):
     
     print(image_4.format,image_4.size,image_4.mode)
 #################Test#################
+#new_mission = Mission()
 
+#image_make_1(new_mission)
+#image_make_2(new_mission)
+#image_make_3(new_mission)
+#image_make_4(new_mission)
 #################Test#################

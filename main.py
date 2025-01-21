@@ -35,12 +35,13 @@ def etGoHome ():
     giveURL = blueskyPost(pic_list)
     print(giveURL)
     print("\nPost sent to Bluesky.")
+    print("All steps clear, job is done.\n")
     
     
 #Schedule for testing
-schedule.every().day.at("11:40:10").do(mrClean)
-schedule.every().day.at("11:40:20").do(makeMeme)
-schedule.every().day.at("11:40:30").do(etGoHome)
+schedule.every().day.at("20:11:10").do(mrClean)
+schedule.every().day.at("20:11:20").do(makeMeme)
+schedule.every().day.at("20:05:30").do(etGoHome)
 #Real schedule at 18:00
 schedule.every().day.at("18:00:10").do(mrClean)
 schedule.every().day.at("18:00:20").do(makeMeme)

@@ -144,7 +144,7 @@ class Details (Action): #This is working, now i need to figure out how to execut
                 extra_enemy = random.randrange (0, len(extra_enemies))
                 chosen_ext = extra_enemies[extra_enemy]
                 quantity = str(random.randrange(1, 25))
-                total_ext = chosen_ext +" "+"x" +" "+quantity
+                total_ext = chosen_ext +" "+"x" +quantity
                 return f"{total_ext}"
             else:
                 return "Unknown"
@@ -225,7 +225,7 @@ class Mission (Details):
                 condition = f"Halt their actions."
                 return brief, condition
             elif text_definer == 'Assist "x"':
-                brief = f"We're requesting you to assist {self.main_char}'s transportation team. They are now moving from the {self.main_loc} to our HQ, but they have come under attack. Help them reach their destination."
+                brief = f"We're requesting you to assist {self.main_char}'s transportation team. They are now moving from the base in {self.main_loc} to our HQ, but they have come under attack. Help them reach their destination."
                 condition = f"Team arrives safely."
                 return brief, condition
             elif text_definer == 'Mop Up "x"':
@@ -285,7 +285,7 @@ class Mission (Details):
                 condition = f"Reclaim the sector."
                 return brief, condition
             elif text_definer == 'Observe "x"':
-                brief = f"We now know how to take control of {self.main_char} massive weapon. But before we even consider doing so, a thorough search of {self.main_loc} must be conducted. We're sending you in to fulfill this objective."
+                brief = f"We now know how to take control of {self.main_char}'s massive weapon. But before we even consider doing so, a thorough search of {self.main_loc} must be conducted. We're sending you in to fulfill this objective."
                 condition = f"Recon the location."
                 return brief, condition
             elif text_definer == 'Assault "x"':
