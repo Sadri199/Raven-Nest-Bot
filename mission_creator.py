@@ -277,7 +277,7 @@ class Mission (Details):
                 condition = f"Find the intel first."
                 return brief, condition
             elif text_definer == 'Defend "x"': 
-                brief = f"An emergency situation has arisen in our Laboratory at the center of {self.main_loc} is under attack by unknown forces. The invaders have divided and are attacking via different routes."
+                brief = f"An emergency situation has arisen in our Laboratory at the center of {self.main_loc}. It is currently under attack by unknown forces. The invaders have divided and are attacking via different routes."
                 condition = f"Protect the lab."
                 return brief, condition
             elif text_definer == 'Retake "x"':
