@@ -289,7 +289,7 @@ class Mission (Details):
                 condition = f"Recon the location."
                 return brief, condition
             elif text_definer == 'Assault "x"':
-                brief = f"Preparations are underway for a full-scale assault on {self.main_loc}'s data center. You must destroy the generators that power the security system and eliminate all {self.main_char} patrols you find."
+                brief = f"Preparations are underway for a full-scale assault on {self.main_loc}'s data center. You must destroy the generators that power the security system and eliminate all {self.main_char}'s patrols you find."
                 condition = f"Invade the data center."
                 return brief, condition
             elif text_definer == 'Enter "x"':
