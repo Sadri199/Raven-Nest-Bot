@@ -169,11 +169,11 @@ class Mission (Details):
         def missionMaker():
             text_definer = self.main_title
             if text_definer == 'Raven Test:"x"':
-                brief = f"This is the only test we give to people who want to become a Raven. You must battle against the opponent {self.main_char} and survive. If you survive, you will be considered a Raven. That's all. Good luck."
+                brief = f"This is the only test we give to people who want to become a Raven. You must battle against {self.main_char} and survive. If you survive, you will be considered a Raven. That's all. Good luck."
                 condition = f"Win the battle."
                 return brief, condition
             elif text_definer == 'Stop "x"':
-                brief = f"We have managed to obtain vital information of {self.main_char}. They plan to hide inside the {self.main_loc} sewers and build their headquarters there. We will never let them build their headquarters."
+                brief = f"We have managed to obtain vital information about {self.main_char}. They plan to hide inside {self.main_loc}'s sewers and build their headquarters there. We will never let them do it."
                 condition = f"Destroy their HQ."
                 return brief, condition
             elif text_definer == 'Remove "x"':
@@ -181,19 +181,19 @@ class Mission (Details):
                 condition = f"Kill the target."
                 return brief, condition
             elif text_definer == 'Rescue "x"':
-                brief = f"We lost communications with one of our transport trucks heading for {self.main_loc}. We strongly believe that this was an act of a terrorist group targeting {self.main_char}. Eliminate all attackers."
+                brief = f"We lost communications with one of our transport trucks heading towards {self.main_loc}. We strongly believe that this was an act of a terrorist group targeting {self.main_char}. Eliminate all attackers."
                 condition = f"Rescue the target."
                 return brief, condition
             elif text_definer == 'Pursuit "x"':
-                brief = f"Just now, {self.main_char}, thought to be part of a terrorists group, appeared in {self.main_loc}. {self.main_char} is cornered in a nearby parking garage. Go to the scene ASAP and take care of them."
+                brief = f"Just now, {self.main_char}, thought to be part of a terrorist group, appeared in {self.main_loc}. They are cornered in a nearby parking garage. Go to the scene ASAP and take care of them."
                 condition = f"Apprehend the target."
                 return brief, condition
             elif text_definer == 'Guard "x"':
-                brief = f"We have been informed of a plan to attack {self.main_char}. The location {self.main_loc}, has very little cover. Arrive ASAP there. Give highest priority to ensuring their safety."
+                brief = f"We have been informed of a plan to attack {self.main_char}. They are in {self.main_loc} and it has very little cover. Arrive ASAP there. Give highest priority to ensuring their safety."
                 condition = f"Protect the target."
                 return brief, condition
             elif text_definer == 'Destroy "x"':
-                brief = f"Terrible news just came in. {self.main_char} has gotten hold of the giant space cannon! The weapon is certain to seal the fate of the world if it is fired at {self.main_loc} now. Go to space and stop them!"
+                brief = f'Terrible news just came in. {self.main_char} has gotten hold of the Giant Space Cannon! The weapon is certain to seal the fate of the world if it is fired at {self.main_loc}. Go to Space and stop them!'
                 condition = f"Eliminate the target."
                 return brief, condition
             elif text_definer == 'Raven Battle:"x"':
@@ -201,15 +201,15 @@ class Mission (Details):
                 condition = f"Beat the Opponent."
                 return brief, condition
             elif text_definer == 'Attack "x"':
-                brief = f"I've sent out a mission request to {self.main_char}. The request I sent out, was for the removal of MTs attacking the Construction Site in {self.main_loc}. Your objective is to take them out."
+                brief = f"I've sent out a mission request to {self.main_char}. The request I sent out, was for the removal of MTs attacking the Construction Site in {self.main_loc}. Your objective is to eliminate {self.main_char}."
                 condition = f"Kill the target."
                 return brief, condition
             elif text_definer == 'Eliminate "x"':
-                brief = f"We've relocated our Chief Scientist, to our Corporate HQ in {self.main_loc}. But the building is now under attack. The ID of the intruder is {self.main_char}. We have no time to waste. Take them out."
+                brief = f"We've relocated our Chief Scientist to our Corporate HQ in {self.main_loc}, but the building is now under attack. The intruder is {self.main_char}. We have no time to waste. Take them out."
                 condition = f"Finish the target."
                 return brief, condition
             elif text_definer == 'Disrupt "x"':
-                brief = f"We would like you to disrupt {self.main_char} military exercises. We have been informed that their organization has been using these exercises to collect data for Project Phantasma. Destroy all opposing forces."
+                brief = f"We would like you to disrupt the military exercises of {self.main_char}'s forces. We have been informed that their organization has been collecting data for Project Phantasma. Destroy all opposing forces."
                 condition = f"Stop their actions."
                 return brief, condition
             elif text_definer == 'Protect "x"':
@@ -217,7 +217,7 @@ class Mission (Details):
                 condition = f"Guard the target."
                 return brief, condition
             elif text_definer == 'Capture "x"':
-                brief = f"We have been informed that a high ranking official will be visiting {self.main_char}'s weapon test facility in {self.main_loc}. Arrive there and capture them."
+                brief = f"We have been informed that a high ranking official will be visiting {self.main_char}'s facility in {self.main_loc}. Arrive there and capture them."
                 condition = f"Detain the target."
                 return brief, condition
             elif text_definer == 'Intercept "x"':
@@ -225,15 +225,15 @@ class Mission (Details):
                 condition = f"Halt their actions."
                 return brief, condition
             elif text_definer == 'Assist "x"':
-                brief = f"We're requesting you to assist {self.main_char}'s transportation team. They are now moving from the base in {self.main_loc} to our HQ, but they have come under attack. Help them reach their destination."
+                brief = f"We're requesting you to assist {self.main_char}'s transportation team. They are now moving from the base in {self.main_loc} to our HQ, but they are under attack. Help them reach their destination."
                 condition = f"Team arrives safely."
                 return brief, condition
             elif text_definer == 'Mop Up "x"':
-                brief = f"We have heard a rumor that a former {self.main_char} military facility in {self.main_loc} has recently been visited by an unknown group. Eliminate them ASAP."
+                brief = f"We have heard a rumor that a former {self.main_char}'s facility in {self.main_loc} has recently been visited by an unknown group. Eliminate them ASAP."
                 condition = f"Destroy the group."
                 return brief, condition
             elif text_definer == 'Nullify "x"':
-                brief = f"The group {self.main_char} broke into our property at {self.main_loc}, stole several tanks and fled. Since they stole tanks, we cannot leave them be. Go and defeat them as soon as possible."
+                brief = f"{self.main_char}'s group broke into our property at {self.main_loc}. They stole several tanks and fled. We cannot leave them be. Go and defeat them as soon as possible."
                 condition = f"Erase the thieves."
                 return brief, condition
             elif text_definer == 'Chase "x"':
@@ -249,7 +249,7 @@ class Mission (Details):
                 condition = f"Stop the invation."
                 return brief, condition
             elif text_definer == 'Help "x"':
-                brief = f"An emergency situation has come up. We'll be sending a mission request directly. The {self.main_char} Marine Laboratory is under attack. We've already sent in another Raven, but he was unable to complete the mission."
+                brief = f"An emergency situation has come up. We'll be sending a mission request directly. The {self.main_char}'s Marine Laboratory is under attack. We've already sent in another Raven, but he was unable to complete the mission."
                 condition = f"Repel the assault."
                 return brief, condition
             elif text_definer == 'Recon "x"':
@@ -261,11 +261,11 @@ class Mission (Details):
                 condition = f"Assault the base."
                 return brief, condition
             elif text_definer =='Preserve "x"':
-                brief = f"We want you to guard a new type of radar for ACs that we have developed. A prototype model is new stored in a warehouse at {self.main_loc}. There is a good chance that {self.main_char} agents sabotaged the system."
+                brief = f"We want you to guard a new type of radar for ACs that we have developed. A prototype model is stored in a warehouse at {self.main_loc}. There is a good chance that {self.main_char} agents sabotaged the system."
                 condition = f"Protect the AC part."
                 return brief, condition
             elif text_definer == 'Regain "x" ':
-                brief = f"We just got a terrifying message from {self.main_char}. They said that they are occupying {self.main_loc}'s base. Their demands are for the immediate dismantling of {self.main_req}. Eliminate them quickly."
+                brief = f"We just got a terrifying message from {self.main_char}. They said that they are occupying {self.main_loc}'s base. Their demands are for the immediate dismantling of {self.main_req} base. Eliminate them quickly."
                 condition = f"Remove the invaders."
                 return brief, condition
             elif text_definer == 'Infiltrate "x"':
@@ -281,11 +281,11 @@ class Mission (Details):
                 condition = f"Protect the lab."
                 return brief, condition
             elif text_definer == 'Retake "x"':
-                brief = f"Raven, we'd like your assistance in reestablishing {self.main_req}'s control over sector {self.main_loc}. You'll accompany a contingent of our tanks and work with them to eliminate any {self.main_char} forces."
+                brief = f"Raven, we'd like your assistance in reestablishing {self.main_req}'s control over sector {self.main_loc}. You'll accompany a contingent of our tanks and work with them to eliminate any {self.main_char}'s forces."
                 condition = f"Reclaim the sector."
                 return brief, condition
             elif text_definer == 'Observe "x"':
-                brief = f"We now know how to take control of {self.main_char}'s massive weapon. But before we even consider doing so, a thorough search of {self.main_loc} must be conducted. We're sending you in to fulfill this objective."
+                brief = f"We now know how to take control of {self.main_char}'s massive weapon, but before we even consider doing so, a thorough search of {self.main_loc} must be conducted. We're sending you in to scout the area."
                 condition = f"Recon the location."
                 return brief, condition
             elif text_definer == 'Assault "x"':
