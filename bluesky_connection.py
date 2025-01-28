@@ -33,7 +33,9 @@ def blueskyPost(pic_list):
     client.login(user,secret)
 
     new_post = client.send_images(text='A new mission is available, Raven. Type "Yes" to accept or "No" to decline it.', images=pic_list)
-    url = new_post.uri #If everything works fine, here i can see the URI of the post.
+    raw_url = new_post.uri
+    splitted = raw_url.split("/")
+    url = "https://bsky.app/profile/ravennestboard.bsky.social/post/" + splitted[-1] #If everything works fine, here i can see the URI of the post.
     
     print("Sending post to Bluesky.\n")
     return url

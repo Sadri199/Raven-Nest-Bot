@@ -39,9 +39,9 @@ def etGoHome ():
     
     
 #Schedule for testing
-schedule.every().day.at("18:45:10").do(mrClean)
-schedule.every().day.at("18:45:20").do(makeMeme)
-schedule.every().day.at("18:45:30").do(etGoHome)
+schedule.every().day.at("21:51:10").do(mrClean)
+schedule.every().day.at("21:51:20").do(makeMeme)
+schedule.every().day.at("21:51:30").do(etGoHome)
 #Real schedule at 18:00
 schedule.every().day.at("18:00:10").do(mrClean)
 schedule.every().day.at("18:00:20").do(makeMeme)
