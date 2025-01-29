@@ -52,7 +52,7 @@ def image_make_2(new_mission):
     font_second =  ImageFont.truetype("ac1_templates/Perfect DOS VGA 437 Win.ttf", 43) #Ideeal font size for everything!
 
     text_req = new_mission.main_req
-    position_req = (372,405)
+    position_req = (340,405)
 
     text_advance = new_mission.advance
     position_advance = (372,456)
