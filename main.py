@@ -7,6 +7,7 @@ from bluesky_connection import *
 
 
 def mrClean ():
+    print("Initializing jobs!")
     print("Entering first step.\n")
     remove()
     print("First step clear, going to the next step.\n")
@@ -48,5 +49,13 @@ schedule.every().day.at("18:00:20").do(makeMeme)
 schedule.every().day.at("18:00:30").do(etGoHome)
 
 while True:
+    
+    s = schedule.idle_seconds()
+    minutes = s // 60
+    if s == 0:
+        print("Starting job!")
+        break
+    elif s > 0:
+        print(f"Waiting for next schedule! Next schedule in aproximate {minutes} minutes!")
+        time.sleep(s)
     schedule.run_pending()
-    time.sleep(1)
