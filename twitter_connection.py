@@ -1,13 +1,16 @@
 import tweepy
 import datetime
+import random
 from keys import *
 
-#########Twitter#########
 
 consumer_key = api_key_v2
 consumer_secret = api_secret_v2
 access_token = access_token_v1
 access_token_secret = access_token_secret_v1
+
+
+success_rate = random.randrange(1,99)
 
 def uploadPics(): #Media upload is on V1 because i dont pay
     auth = tweepy.OAuth1UserHandler(
@@ -38,16 +41,13 @@ def makeTweet(media_ids): #The tweet itself is on V2 because i dont pay
     ) #Auth with my account.
 
     response = client.create_tweet(media_ids=media_ids,
-        text='A new mission is available, Raven. Type "Yes" to accept or "No" to decline it.'
+        text=f'Success Rate: {success_rate}%\nA new mission is available, Raven. Type "Yes" to accept or ignore it.'
     ) #Grab the auth and pass it with the Tweet itself
 
     print("Sending tweet.\n")
     print(f"https://twitter.com/user/status/{response.data['id']}")
 
-#processTweet = makeTweet()
-
-#########Twitter#########
 
 #########Test#########
-
+#processTweet = makeTweet()
 #########Test#########
