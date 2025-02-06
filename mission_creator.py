@@ -5,7 +5,7 @@ act_char = ['Raven Test:"x"','Stop "x"','Remove "x"','Rescue "x"','Pursuit "x"',
 
 act_org = ['Mop Up "x"','Nullify "x"','Chase "x"','Obstruct "x"','Secure "x"','Help "x"']
 
-act_loc = ['Recon "x"','Hinder "x"','Preserve "x"','Regain "x" ','Infiltrate "x"','Search in "x"','Defend "x"','Retake "x"','Observe "x"','Assault "x"','Enter "x"']
+act_loc = ['Recon "x"','Hinder "x"','Preserve "x"','Regain "x" ','Infiltrate "x"','Search "x"','Defend "x"','Retake "x"','Observe "x"','Assault "x"','Enter "x"']
 
 objective_list = ["Goku (Mid)", "Shadow the Hedgehog", "Dorothy (Nikke)", "Hustler-1", "Nemo (AC)", "Gohan Calvo", "Rena Hirose (AC)", "Asterix", "Obelix", "Leos Klein", "Stinger", "Scarface (AC)", "Malcolm (UT)", "Abyssal Dision"] #Can't be longer than 20 characters!
 
@@ -272,7 +272,7 @@ class Mission (Details):
                 brief = f"Raid the base in {self.main_loc}. In order to bypass the security, you must destroy the four energy generators located outside. Good luck."
                 condition = f"Assault the base."
                 return brief, condition
-            elif text_definer == 'Search in "x"':
+            elif text_definer == 'Search "x"':
                 brief = f"Information has been gathered on the whereabouts of Project Phantasma. It can be located in the subway area of {self.main_loc}. I assume {self.main_char} is planning on finding it before us, so be quick."
                 condition = f"Find the intel first."
                 return brief, condition

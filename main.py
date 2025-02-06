@@ -1,10 +1,12 @@
 import schedule
 import time
+import random
 from eraser import remove
 from image_creator import *
 from twitter_connection import *
 from bluesky_connection import *
 
+success_rate = random.randrange(1,99)
 
 def mrClean ():
     print("Initializing jobs!")
@@ -28,21 +30,21 @@ def etGoHome ():
     print("Entering final step.\n")
     process_pic = uploadPics()
     media_ids = list(process_pic)
-    makeTweet(media_ids)
+    makeTweet(media_ids,success_rate)
     print("\nTweet sent to Twitter.")
     time.sleep(1)
     open_now = opener()    
     pic_list = list(open_now)
-    giveURL = blueskyPost(pic_list)
+    giveURL = blueskyPost(pic_list,success_rate)
     print(giveURL)
     print("\nPost sent to Bluesky.")
     print("All steps clear, job is done.\n")
     
     
 #Schedule for testing
-schedule.every().day.at("19:04:10").do(mrClean)
-schedule.every().day.at("19:04:20").do(makeMeme)
-schedule.every().day.at("19:04:30").do(etGoHome)
+schedule.every().day.at("19:22:10").do(mrClean)
+schedule.every().day.at("19:22:20").do(makeMeme)
+schedule.every().day.at("19:22:30").do(etGoHome)
 #Real schedule at 18:00
 schedule.every().day.at("18:00:10").do(mrClean)
 schedule.every().day.at("18:00:20").do(makeMeme)

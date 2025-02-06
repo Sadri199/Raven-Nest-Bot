@@ -11,7 +11,7 @@ filename_2 = str(datetime.date.today()) + "_2nd" + ".png"
 filename_3 = str(datetime.date.today()) + "_3rd" + ".png"
 filename_4 = str(datetime.date.today()) + "_4th" + ".png"
 
-success_rate = random.randrange(1,99)
+#success_rate = random.randrange(1,99)
 
 def opener():
     
@@ -31,7 +31,7 @@ def opener():
         
 client = Client()
 
-def blueskyPost(pic_list):
+def blueskyPost(pic_list,success_rate):
     print("Preparing upload to Bluesky.")
     client.login(user,secret)
 

@@ -9,8 +9,7 @@ consumer_secret = api_secret_v2
 access_token = access_token_v1
 access_token_secret = access_token_secret_v1
 
-
-success_rate = random.randrange(1,99)
+#success_rate = random.randrange(1,99)
 
 def uploadPics(): #Media upload is on V1 because i dont pay
     auth = tweepy.OAuth1UserHandler(
@@ -34,7 +33,7 @@ def uploadPics(): #Media upload is on V1 because i dont pay
     print("Sending pics to Twitter queue.\n")
     return image1.media_id_string, image2.media_id_string, image3.media_id_string, image4.media_id_string
 
-def makeTweet(media_ids): #The tweet itself is on V2 because i dont pay
+def makeTweet(media_ids,success_rate): #The tweet itself is on V2 because i dont pay
     client = tweepy.Client(
         consumer_key=api_key_v2, consumer_secret=api_secret_v2,
         access_token=access_token_v1, access_token_secret=access_token_secret_v1
