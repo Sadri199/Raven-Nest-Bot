@@ -1,24 +1,24 @@
 import random
 
 #################Data#################
-act_char = ['Raven Test:"x"','Stop "x"','Remove "x"','Rescue "x"','Pursuit "x"','Guard "x"','Destroy "x"','Raven Battle:"x"','Attack "x"','Eliminate "x"','Disrupt "x"','Protect "x"','Capture "x"','Intercept "x"','Assist "x"']
+act_char = ['Raven Test','Stop "x"','Remove "x"','Rescue "x"','Pursuit "x"','Guard "x"','Destroy "x"','Arena Battle!','Attack "x"','Eliminate "x"','Disrupt "x"','Protect "x"','Capture "x"','Intercept "x"','Assist "x"']
 
 act_org = ['Mop Up "x"','Nullify "x"','Chase "x"','Obstruct "x"','Secure "x"','Help "x"']
 
 act_loc = ['Recon "x"','Hinder "x"','Preserve "x"','Regain "x" ','Infiltrate "x"','Search "x"','Defend "x"','Retake "x"','Observe "x"','Assault "x"','Enter "x"']
 
-objective_list = ["Goku (Mid)", "Shadow the Hedgehog", "Dorothy (Nikke)", "Hustler-1", "Nemo (AC)", "Gohan Calvo", "Rena Hirose (AC)", "Asterix", "Obelix", "Leos Klein", "Stinger", "Scarface (AC)", "Malcolm (UT)", "Abyssal Dision"] #Can't be longer than 20 characters!
+objective_list = ["Goku (Mid)", "Shadow the Hedgehog", "Dorothy (Nikke)", "Hustler-1", "Nemo (AC)", "Gohan Calvo", "Rena Hirose (AC)", "Asterix", "Obelix", "Leos Klein", "Stinger", "Scarface (AC)", "Malcolm (UT)", "Abyssal Dision", "Mobius-1", "Blaze (AC)", "Blaze the Cat"] #Can't be longer than 20 characters!
 
-organization_list = ["Raven's Nest", "Emeraude", "Chrome", "Murakumo Millenium", "PROGTECH", "Neucom", "Liandri", "Twitch Staff", "Global Cortex", "Chemical-Dyne", "Struggle", "UPEO", "General Resource", "Zio Matrix", "Crest", "Mirage", "Kisaragi"] #Can't be longer than 20 characters!
+organization_list = ["Raven's Nest", "Emeraude", "Chrome", "Murakumo Millenium", "PROGTECH", "Neucom", "Liandri", "Twitch Staff", "Global Cortex", "Chemical-Dyne", "Struggle", "UPEO", "General Resource", "Zio Matrix", "Crest", "Mirage", "Kisaragi", "ISAF"] #Can't be longer than 20 characters!
 
-requester_list = ["Vargskelethor", "Miles 'Tails' Prower", "Sugar (Nikke)", "Neromatsu", "Billy Kid (ZZZ)"] #Can't be longer than 20 characters!
+requester_list = ["Vargskelethor", "Miles 'Tails' Prower", "Sugar (Nikke)", "Neromatsu", "Billy Kid (ZZZ)", "Big the Cat", "Froggy"] #Can't be longer than 20 characters!
 requester_list.extend(objective_list)
 requester_list.extend(organization_list)
 #print(requester_list)
 
-extra_enemies = ["MT", "Stinger", "Nine Ball", "Rapture (Nikke)", "Gun Hunter (Sonic)", "Frieza Soldier", "Saibaman", "R-101", "Su-37", "Disorder Unit", "Goomba", "Chuckya"]
+extra_enemies = ["MT", "Stinger", "Nine Ball", "Rapture (Nikke)", "Gun Hunter (Sonic)", "Frieza Soldier", "Saibaman", "R-101", "Su-37", "Disorder Unit", "Goomba", "Chuckya", "Arkbird (AC)"]
 
-locations = ["Montevideo", "Kame House", "Space Colony ARK", "The Ark (Nikke)", "Zam City", "Isaac City", "Eusian Ocean", "Megafloat (AC)", "Vihul Spaceport", "Zio Matrix's HQ", "Murakumo Dome", "PROGTECH Factory", "Amber Crown", "Trene City", "Arena", "Ruglen Lab"] #Can't be longer than 16 characters!
+locations = ["Montevideo", "Kame House", "Space Colony ARK", "The Ark (Nikke)", "Zam City", "Isaac City", "Eusian Ocean", "Megafloat (AC)", "Vihul Spaceport", "Zio Matrix's HQ", "Murakumo Dome", "PROGTECH Factory", "Amber Crown", "Trene City", "Arena", "Ruglen Lab", "Stonehenge (AC)", "Megalith (AC)"] #Can't be longer than 16 characters!
 
 #################Data#################
 
@@ -168,7 +168,7 @@ class Mission (Details):
         
         def missionMaker():
             text_definer = self.main_title
-            if text_definer == 'Raven Test:"x"':
+            if text_definer == 'Raven Test':
                 brief = f"This is the only test we give to people who want to become a Raven. You must battle against {self.main_char} and survive. If you survive, you will be considered a Raven. That's all. Good luck."
                 condition = f"Win the battle."
                 return brief, condition
@@ -196,7 +196,7 @@ class Mission (Details):
                 brief = f'Terrible news just came in. {self.main_char} has gotten hold of the Giant Space Cannon! The weapon is certain to seal the fate of the world if it is fired at {self.main_loc}. Go to Space and stop them!'
                 condition = f"Eliminate the target."
                 return brief, condition
-            elif text_definer == 'Raven Battle:"x"':
+            elif text_definer == 'Arena Battle!':
                 brief = f"Come participate in an AC battle that {self.main_req} will be holding over the next few days. This event pits {self.main_char} in an AC-to-AC battle where the winner takes it all."
                 condition = f"Beat the Opponent."
                 return brief, condition
