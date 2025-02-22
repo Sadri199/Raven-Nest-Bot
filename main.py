@@ -41,10 +41,20 @@ def etGoHome ():
     print("All steps clear, job is done.\n")
     
     
-#Schedule for testing
-schedule.every().day.at("18:34:10").do(mrClean)
-schedule.every().day.at("18:34:20").do(makeMeme)
-schedule.every().day.at("18:34:30").do(etGoHome)
+###################Schedule for testing
+#schedule.every().day.at("18:12:10").do(mrClean)
+#schedule.every().day.at("18:12:20").do(makeMeme)
+#schedule.every().day.at("18:12:30").do(etGoHome)
+###################
+
+#Real schedule at 00:00
+schedule.every().day.at("00:00:10").do(mrClean)
+schedule.every().day.at("00:00:20").do(makeMeme)
+schedule.every().day.at("00:00:30").do(etGoHome)
+#Real schedule at 09:00
+schedule.every().day.at("09:00:10").do(mrClean)
+schedule.every().day.at("09:00:20").do(makeMeme)
+schedule.every().day.at("09:00:30").do(etGoHome)
 #Real schedule at 18:00
 schedule.every().day.at("18:00:10").do(mrClean)
 schedule.every().day.at("18:00:20").do(makeMeme)
