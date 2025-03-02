@@ -1,0 +1,1 @@
+C:\Users\Adrian\Documents\Proyectos\Raven_Nest\venv\Scripts\python.exe C:\Users\Adrian\Documents\Proyectos\Raven_Nest\main.py
