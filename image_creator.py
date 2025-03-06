@@ -24,7 +24,7 @@ def image_make_1 (new_mission):
     text_title = new_mission.main_merge #I should try wrapping the text or making it smaller
     position_title = (116,475)
 
-    font_reward = ImageFont.truetype("ac1_templates/Perfect DOS VGA 437 Win.ttf", 39) #The size is in pixels
+    font_reward = ImageFont.truetype("ac1_templates/Perfect DOS VGA 437 Win.ttf", 35) #The size is in pixels
     text_reward = new_mission.reward
     position_reward = (678,475)
 
