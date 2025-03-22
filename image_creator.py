@@ -22,11 +22,11 @@ def image_make_1 (new_mission):
     # Define the text properties
     font_title = ImageFont.truetype("ac1_templates/Perfect DOS VGA 437 Win.ttf", 35) #The size is in pixels
     text_title = new_mission.main_merge #I should try wrapping the text or making it smaller
-    position_title = (116,475)
+    position_title = (115,475)
 
     font_reward = ImageFont.truetype("ac1_templates/Perfect DOS VGA 437 Win.ttf", 35) #The size is in pixels
     text_reward = new_mission.reward
-    position_reward = (678,475)
+    position_reward = (684,475)
 
     text_color_1 = (255,202,114) #RGB, so 0,0,0 is Black, 255,255,255 is White. 255,202,114 is the specific color of that yellowish font.
 

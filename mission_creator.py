@@ -209,7 +209,7 @@ class Mission (Details):
                 condition = f"Finish the target."
                 return brief, condition
             elif text_definer == 'Disrupt "x"':
-                brief = f"We would like you to disrupt the military exercises of {self.main_char}'s forces. We have been informed that their organization has been collecting data for Project Phantasma. Destroy all opposing forces."
+                brief = f"We would like you to disrupt the military exercises of {self.main_char}'s forces. We have been informed that their organization has been collecting data for Project Phantasma. Destroy all enemies."
                 condition = f"Stop their actions."
                 return brief, condition
             elif text_definer == 'Protect "x"':
@@ -249,7 +249,7 @@ class Mission (Details):
                 condition = f"Stop the invation."
                 return brief, condition
             elif text_definer == 'Help "x"':
-                brief = f"An emergency situation has come up. We'll be sending a mission request directly. The {self.main_char}'s Marine Laboratory is under attack. We've already sent in another Raven, but he was unable to complete the mission."
+                brief = f"Emergency. We'll are sending a mission request directly. The {self.main_char}'s Marine Laboratory is under attack. We've sent another Raven, but they were unable to complete the mission."
                 condition = f"Repel the assault."
                 return brief, condition
             elif text_definer == 'Recon "x"':
@@ -281,7 +281,7 @@ class Mission (Details):
                 condition = f"Protect the lab."
                 return brief, condition
             elif text_definer == 'Retake "x"':
-                brief = f"Raven, we'd like your assistance in reestablishing {self.main_req}'s control over sector {self.main_loc}. You'll accompany a contingent of our tanks and work with them to eliminate any {self.main_char}'s forces."
+                brief = f"Raven, we'd like your assistance in reestablishing {self.main_req}'s control over {self.main_loc}. You'll accompany our tanks and work with them to eliminate {self.main_char}'s forces."
                 condition = f"Reclaim the sector."
                 return brief, condition
             elif text_definer == 'Observe "x"':

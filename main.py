@@ -1,4 +1,4 @@
-import schedule
+#import schedule
 import time
 import random
 from eraser import remove
