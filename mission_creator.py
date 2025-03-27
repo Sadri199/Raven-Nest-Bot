@@ -11,14 +11,14 @@ objective_list = ["Goku (Mid)", "Shadow the Hedgehog", "Dorothy (Nikke)", "Hustl
 
 organization_list = ["Raven's Nest", "Emeraude", "Chrome", "Murakumo Millenium", "PROGTECH", "Neucom", "Liandri", "Twitch Staff", "Global Cortex", "Chemical-Dyne", "Struggle", "UPEO", "General Resource", "Zio Matrix", "Crest", "Mirage", "Kisaragi", "ISAF"] #Can't be longer than 20 characters!
 
-requester_list = ["Vargskelethor", "Miles 'Tails' Prower", "Sugar (Nikke)", "Neromatsu", "Billy Kid (ZZZ)", "Big the Cat", "Froggy"] #Can't be longer than 20 characters!
+requester_list = ["Vargskelethor", "Miles 'Tails' Prower", "Sugar (Nikke)", "Neromatsu", "Billy Kid (ZZZ)", "Big the Cat", "Froggy", "Doro"] #Can't be longer than 20 characters!
 requester_list.extend(objective_list)
 requester_list.extend(organization_list)
 #print(requester_list)
 
 extra_enemies = ["MT", "Stinger", "Nine Ball", "Rapture (Nikke)", "Gun Hunter (Sonic)", "Frieza Soldier", "Saibaman", "R-101", "Su-37", "Disorder Unit", "Goomba", "Chuckya", "Arkbird (AC)"]
 
-locations = ["Montevideo", "Kame House", "Space Colony ARK", "The Ark (Nikke)", "Zam City", "Isaac City", "Eusian Ocean", "Megafloat (AC)", "Vihul Spaceport", "Zio Matrix's HQ", "Murakumo Dome", "PROGTECH Factory", "Amber Crown", "Trene City", "Arena", "Ruglen Lab", "Stonehenge (AC)", "Megalith (AC)"] #Can't be longer than 16 characters!
+locations = ["Montevideo", "Kame House", "Space Colony ARK", "The Ark (Nikke)", "Zam City", "Isaac City", "Eusian Ocean", "Megafloat (AC)", "Vihul Spaceport", "Zio Matrix's HQ", "Murakumo Dome", "PROGTECH Factory", "Amber Crown", "Trene City", "Arena", "Ruglen Lab", "Stonehenge (AC)", "Megalith (AC)", "Facing Worlds"] #Can't be longer than 16 characters!
 
 #################Data#################
 
@@ -297,7 +297,7 @@ class Mission (Details):
                 condition = f"Repulse the intruders."
                 return brief, condition
             else:
-                return "Oops, we couldn't generate a mission briefing. Sorry :("
+                return "Oops, we couldn't generate a mission briefing. Sorry :("                   
                     
         briefing = missionMaker()
         self.mission_text = briefing[0]

@@ -1,5 +1,6 @@
 from PIL import Image, ImageFont, ImageDraw
 from mission_creator import *
+from test import *
 import datetime
 import textwrap
 
@@ -101,7 +102,7 @@ def image_make_3(new_mission):
 
 def image_make_4(new_mission):
     
-    image_4 = Image.open("ac1_templates/fourth_template.png")
+    image_4 = Image.open("ac1_templates/future_template.png")
 
     draw_final_loc = ImageDraw.Draw(image_4)
     draw_final_ext = ImageDraw.Draw(image_4)
@@ -126,6 +127,14 @@ def image_make_4(new_mission):
     text_cond_success = new_mission.condition 
     position_cond_success = (161,604)
     
+    get_pic_1 = imageChooser("Shadow the Hedgehog") #configure the corresponding characters
+    get_pic_2 = imageChooser("Raven's Nest")
+    get_pic_3 = imageChooser("Kame House")
+    #get_pic = imageChooser(new_mission.main_char)
+    image_4.paste(Image.open(get_pic_1), box=(28,78,288,362)) #images of 260 x 284
+    image_4.paste(Image.open(get_pic_2), box=(315,78,575,362)) #images of 260 x 284
+    image_4.paste(Image.open(get_pic_3), box=(600,78,860,362)) #images of 260 x 284
+    
     draw_final_loc.text(position_location, text_location, font=font_final, fill=text_color_final)
     draw_final_ext.text(position_extras, text_extras, font=font_final, fill=extra_color)
     draw_cond_success.text(position_cond_success, text_cond_success, font=font_final, fill=text_color_final)
@@ -135,10 +144,10 @@ def image_make_4(new_mission):
     
     print(image_4.format,image_4.size,image_4.mode)
 #################Test#################
-#new_mission = Mission()
+new_mission = Mission()
 
-#image_make_1(new_mission)
-#image_make_2(new_mission)
-#image_make_3(new_mission)
-#image_make_4(new_mission)
+image_make_1(new_mission)
+image_make_2(new_mission)
+image_make_3(new_mission)
+image_make_4(new_mission)
 #################Test#################
