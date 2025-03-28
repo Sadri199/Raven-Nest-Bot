@@ -7,7 +7,7 @@ act_org = ['Mop Up "x"','Nullify "x"','Chase "x"','Obstruct "x"','Secure "x"','H
 
 act_loc = ['Recon "x"','Hinder "x"','Preserve "x"','Regain "x" ','Infiltrate "x"','Search "x"','Defend "x"','Retake "x"','Observe "x"','Assault "x"','Enter "x"']
 
-objective_list = ["Goku (Mid)", "Shadow the Hedgehog", "Dorothy (Nikke)", "Hustler-1", "Nemo (AC)", "Gohan Calvo", "Rena Hirose (AC)", "Asterix", "Obelix", "Leos Klein", "Stinger", "Scarface (AC)", "Malcolm (UT)", "Abyssal Dision", "Mobius-1", "Blaze (AC)", "Blaze the Cat"] #Can't be longer than 20 characters!
+objective_list = ["Goku (Mid)", "Shadow the Hedgehog", "Dorothy (Nikke)", "Hustler-1", "Nemo (AC)", "Gohan Calvo", "Rena Hirose (AC)", "Asterix", "Obelix", "Leos Klein", "Stinger", "Phoenix (AC)", "Malcolm (UT)", "Abyssal Dision", "Mobius-1", "Blaze (AC)", "Blaze the Cat"] #Can't be longer than 20 characters!
 
 organization_list = ["Raven's Nest", "Emeraude", "Chrome", "Murakumo Millenium", "PROGTECH", "Neucom", "Liandri", "Twitch Staff", "Global Cortex", "Chemical-Dyne", "Struggle", "UPEO", "General Resource", "Zio Matrix", "Crest", "Mirage", "Kisaragi", "ISAF"] #Can't be longer than 20 characters!
 
@@ -18,7 +18,7 @@ requester_list.extend(organization_list)
 
 extra_enemies = ["MT", "Stinger", "Nine Ball", "Rapture (Nikke)", "Gun Hunter (Sonic)", "Frieza Soldier", "Saibaman", "R-101", "Su-37", "Disorder Unit", "Goomba", "Chuckya", "Arkbird (AC)"]
 
-locations = ["Montevideo", "Kame House", "Space Colony ARK", "The Ark (Nikke)", "Zam City", "Isaac City", "Eusian Ocean", "Megafloat (AC)", "Vihul Spaceport", "Zio Matrix's HQ", "Murakumo Dome", "PROGTECH Factory", "Amber Crown", "Trene City", "Arena", "Ruglen Lab", "Stonehenge (AC)", "Megalith (AC)", "Facing Worlds"] #Can't be longer than 16 characters!
+locations = ["Montevideo", "Kame House", "Space Colony ARK", "The Ark (Nikke)", "Zam City", "Isaac City", "Usea", "Megafloat (AC)", "Vihul Spaceport", "Zio Matrix's HQ", "Murakumo Dome", "PROGTECH Factory", "Amber Crown", "Trene City", "Arena", "Ruglen Lab", "Stonehenge (AC)", "Megalith (AC)", "Facing Worlds"] #Can't be longer than 16 characters!
 
 #################Data#################
 
@@ -76,7 +76,8 @@ class Action (Reward): #I need a list of actions, then i have to append this to 
             chosen_req = requester_list[requester]
             location = random.randrange (0, len(locations))
             chosen_loc = locations[location]
-            return merge, chosen_act, chosen_obj, chosen_req, chosen_loc
+            image = "char"
+            return merge, chosen_act, chosen_obj, chosen_req, chosen_loc, image
         
         def randomActionOrg():
             rand_Act = random.randrange (0, len(act_org))
@@ -88,7 +89,8 @@ class Action (Reward): #I need a list of actions, then i have to append this to 
             chosen_req = requester_list[requester]
             location = random.randrange (0, len(locations))
             chosen_loc = locations[location]
-            return merge, chosen_act_org, chosen_org, chosen_req, chosen_loc
+            image = "org"
+            return merge, chosen_act_org, chosen_org, chosen_req, chosen_loc, image
         
         def randomActionLoc():
             rand_Act = random.randrange (0, len(act_loc))
@@ -100,7 +102,8 @@ class Action (Reward): #I need a list of actions, then i have to append this to 
             chosen_req = requester_list[requester]
             extra_item = random.randrange (0, len(objective_list))
             chosen_item = objective_list[extra_item]
-            return merge, chosen_act_loc, chosen_item, chosen_req, chosen_loc 
+            image = "loc"
+            return merge, chosen_act_loc, chosen_item, chosen_req, chosen_loc, image 
         
         def randomAction():
             rand_Act = random.randrange (0, 3)
@@ -123,9 +126,10 @@ class Action (Reward): #I need a list of actions, then i have to append this to 
         self.main_action = instance_rand
         self.main_merge = instance_rand[0]
         self.main_title = instance_rand[1]
-        self.main_char = instance_rand[2] ##This also applies to Items for Action Locations
+        self.main_char = instance_rand[2] 
         self.main_req = instance_rand[3]
-        self.main_loc = instance_rand[4] 
+        self.main_loc = instance_rand[4]
+        self.main_image = instance_rand[5]
         
     def __str__(self):
         return f"Objective: {self.main_action}Merged Title: {self.main_merge}Title: {self.main_title}Character: {self.main_char}Requester: {self.main_req}Location: {self.main_loc}"
@@ -145,13 +149,15 @@ class Details (Action): #This is working, now i need to figure out how to execut
                 chosen_ext = extra_enemies[extra_enemy]
                 quantity = str(random.randrange(1, 25))
                 total_ext = chosen_ext +" "+"x" +quantity
-                return f"{total_ext}"
+                return f"{total_ext}", chosen_ext
             else:
-                return "Unknown"
+                chosen_ext = ""
+                return "Unknown", chosen_ext
             
         instance_ext = extras()
         
-        self.extra_enemies = instance_ext
+        self.extra_enemies = instance_ext[0]
+        self.this_extra = instance_ext[1]
         
     def __str__(self):
         super().__str__()

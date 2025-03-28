@@ -5,10 +5,10 @@
 - [x] Class with certain stuff:
     - [x]  Random Reward, calculate advance and final payment.
     - [x]  Random Subject, character and/or Organization.
-        - [ ]  Make a DB (MySQL?) for all the characters and their pictures.
-        - [ ]  Learn how to read the info from the DB and put it into the Script.
+        - [x]  Make a DB (MySQL?) for all the characters and their pictures.
+        - [x]  Learn how to read the info from the DB and put it into the Script.
     - [x]  Locations, fictional and real.
-        - [ ]  Make a DB for all locations and their pictures.
+        - [x]  Make a DB for all locations and their pictures.
 - [x]  List all possible actions/verbs for a mission.
 - [x]  Hardcode mission text for each action.
 - [x]  Try to make this work!

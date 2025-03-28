@@ -35,7 +35,7 @@ def blueskyPost(pic_list,success_rate):
     print("Preparing upload to Bluesky.")
     client.login(user,secret)
 
-    new_post = client.send_images(text=f'Success Rate: {success_rate}%\nA new mission is available, Raven. Type "Yes" to accept or ignore it.', images=pic_list)
+    new_post = client.send_images(text=f'Success Rate: {success_rate}%\nA new mission is available, Raven. Type "Yes" to accept or ignore it.', images=pic_list, image_alts=["An image created by a bot, inspired by the Armored Core franchise."])
     raw_url = new_post.uri
     splitted = raw_url.split("/")
     url = "https://bsky.app/profile/ravennestboard.bsky.social/post/" + splitted[-1] #If everything works fine, here i can see the URI of the post.

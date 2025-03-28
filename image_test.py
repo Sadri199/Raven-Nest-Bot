@@ -1,6 +1,6 @@
 from PIL import Image, ImageFont, ImageDraw
 from mission_creator import *
-from test import *
+from dicts import *
 import datetime
 import textwrap
 
@@ -9,7 +9,6 @@ import textwrap
 
 
 #new_mission = Mission()
-#print(new_mission.main_merge)
 
 def mission_wrapper(text):
     wrapped = textwrap.fill(text, width=32)
@@ -100,6 +99,7 @@ def image_make_3(new_mission):
     print(image_3.format,image_3.size,image_3.mode)
 #################Third Template#################
 
+#################Fourth Template#################
 def image_make_4(new_mission):
     
     image_4 = Image.open("ac1_templates/future_template.png")
@@ -122,15 +122,22 @@ def image_make_4(new_mission):
     else:
         extra_color = text_color_final 
         
-    position_extras = (350,504)
+    position_extras = (345,508)
     
     text_cond_success = new_mission.condition 
     position_cond_success = (161,604)
     
-    get_pic_1 = imageChooser("Shadow the Hedgehog") #configure the corresponding characters
-    get_pic_2 = imageChooser("Raven's Nest")
-    get_pic_3 = imageChooser("Kame House")
-    #get_pic = imageChooser(new_mission.main_char)
+    pic_extras = new_mission.this_extra
+    pic_loc = new_mission.main_image
+    if pic_extras == "Unknown" and pic_loc != "loc":
+        third_picture = new_mission.main_loc
+    else:    
+        third_picture = pic_extras
+        
+    get_pic_1 = imageChooser(new_mission.main_char) #configure the corresponding characters
+    get_pic_2 = imageChooser(new_mission.main_req)
+    get_pic_3 = imageChooser(third_picture)
+    
     image_4.paste(Image.open(get_pic_1), box=(28,78,288,362)) #images of 260 x 284
     image_4.paste(Image.open(get_pic_2), box=(315,78,575,362)) #images of 260 x 284
     image_4.paste(Image.open(get_pic_3), box=(600,78,860,362)) #images of 260 x 284
@@ -143,11 +150,13 @@ def image_make_4(new_mission):
     image_4.save(filename_4)
     
     print(image_4.format,image_4.size,image_4.mode)
+#################Fourth Template#################    
+    
 #################Test#################
-new_mission = Mission()
+# = Mission()
 
-image_make_1(new_mission)
-image_make_2(new_mission)
-image_make_3(new_mission)
-image_make_4(new_mission)
-#################Test#################
+#image_make_1(new_mission)
+#image_make_2(new_mission)
+#image_make_3(new_mission)
+#image_make_4(new_mission)
+##################Test#################
