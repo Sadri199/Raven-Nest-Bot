@@ -130,8 +130,9 @@ def image_make_4(new_mission):
     
     pic_extras = new_mission.this_extra
     pic_loc = new_mission.main_image
-    if pic_extras == "Unknown" and pic_loc != "loc":
-        third_picture = new_mission.main_loc
+    if pic_extras == "Unknown":
+        if pic_loc != "loc":
+            third_picture = new_mission.main_loc
     else:    
         third_picture = pic_extras
         

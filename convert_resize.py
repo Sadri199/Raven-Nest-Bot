@@ -13,6 +13,7 @@ for filename in os.listdir(main_directory):
         im = Image.open(main_directory+filename)
         im.save('img/convert/'+prefix+'.png')    
     else:
+        print("Ending conversion.")
         continue
 
 
@@ -25,5 +26,6 @@ for filename in os.listdir(png_directory):
         new_size = im.resize(size=(260,284))
         new_size.save('img/convert/png/'+prefix+'.png')
     else:
+        print("Ending resize.")
         continue    
     

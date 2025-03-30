@@ -16,6 +16,20 @@ char_dict = {
     "Mobius-1": "img/chars/mobius.png",
     "Blaze (AC)": "img/chars/blaze.png",
     "Blaze the Cat": "img/chars/blaze_cat.png",
+    "Ezio Auditore": "img/chars/ezio.png",
+    "Kapura": "img/chars/kapura.png",
+    "Tom Nook": "img/chars/tom_nook.png",
+    "SpongeBob": "img/chars/spongebob.png",
+    "JC Denton": "img/chars/jc_denton.png",
+    "Adam Jensen": "img/chars/adam_jensen.png",
+    "Albert Wesker": "img/chars/albert_wesker.png",
+    "Colgate": "img/chars/colgate.png",
+    "Krolik": "img/chars/krolik.png",
+    "Nemesis (GF2)": "img/chars/nemesis_gf2.png",
+    "Red Shoes (Nikke)": "img/chars/red_shoes.png",
+    "Prof. Hojo": "img/chars/hojo.png",
+    "Yoshimitsu": "img/chars/yoshimitsu.png",
+    "SHODAN": "img/chars/shodan.png",
 }
 
 org_dict = {
@@ -48,6 +62,13 @@ req_dict = {
     "Big the Cat": "img/reqs/big.png",
     "Froggy": "img/reqs/froggy.png",
     "Doro": "img/reqs/doro.png",
+    "Snoop Dogg": "img/reqs/snoop_dogg.png",
+    "Obama": "img/reqs/obama.png",
+    "Air Bud": "img/reqs/air_bud.png",
+    "Pom-Pom": "img/reqs/pom_pom.png",
+    "Anne (Nikke)": "img/reqs/anne_nikke.png",
+    "Yuffie Kisaragi": "img/reqs/yuffie.png",
+    "Hello Kitty": "img/reqs/hello_kitty.png",
     }
 
 extra_dict = {
@@ -86,6 +107,14 @@ loc_dict = {
     "Stonehenge (AC)": "img/locs/stonehenge.png",
     "Megalith (AC)": "img/locs/megalith.png",
     "Facing Worlds": "img/locs/facing.png",
+    "Area 51": "img/locs/area_51.png",
+    "Chemical Plant": "img/locs/chemical.png",
+    "Midgar": "img/locs/midgar.png",
+    "Moonlit Wilderness": "img/locs/moonlit.png",
+    "Hell, MI": "img/locs/hell_mi.png",
+    "Island (AC)": "img/locs/island_ac.png",
+    "Astral Express": "img/locs/astral_express.png",
+    "The Elmo (GF2)": "img/locs/elmo.png",
 }
 
 def imageChooser(picture):
