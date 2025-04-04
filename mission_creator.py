@@ -1,7 +1,7 @@
 import random
 
 #################Data#################
-act_char = ['Raven Test','Stop "x"','Remove "x"','Rescue "x"','Pursuit "x"','Guard "x"','Destroy "x"','Arena Battle!','Attack "x"','Eliminate "x"','Disrupt "x"','Protect "x"','Capture "x"','Intercept "x"','Assist "x"','Spy "x"','Training!','Participate in race','Dance Battle!','Twerk Off','Hear "x"','Conversation Needed','Group Chat!','Fishing Competition!','Cooking Tournament!','Drink Competition','Pool Match','Reading Time','Date "x"','Bakery Time!','"x" is High','Rehab "x"','Deliver Drugs!']
+act_char = ['Raven Test','Stop "x"','Remove "x"','Rescue "x"','Pursuit "x"','Guard "x"','Destroy "x"','Arena Battle!','Attack "x"','Eliminate "x"','Disrupt "x"','Protect "x"','Capture "x"','Intercept "x"','Assist "x"','Spy "x"','Training!','Ridge Racing!','Dance Battle!','Twerk Off','Hear "x"','Conversation Needed','Group Chat!','Fishing Competition!','Cooking Tournament!','Drink Competition','Pool Match','Reading Time','Date "x"','Bakery Time!','"x" is High','Rehab "x"','Deliver Drugs!']
 
 act_org = ['Mop Up "x"','Nullify "x"','Chase "x"','Obstruct "x"','Secure "x"','Help "x"','Survey "x"']
 
@@ -162,7 +162,7 @@ class Details (Action): #This is working, now i need to figure out how to execut
                 total_ext = chosen_ext +" "+"x" +quantity
                 return f"{total_ext}", chosen_ext
             else:
-                chosen_ext = ""
+                chosen_ext = "Unknown"
                 return "Unknown", chosen_ext
         
         def otherSelector():
@@ -278,8 +278,8 @@ class Mission (Details):
                 brief = f"{self.main_char} is training to become {self.title} and I can't help with that. You will be rewarded for your assistance."
                 condition = f"Help in their training."
                 return brief, condition 
-            elif text_definer == 'Participate in race':
-                brief = f"A new race will start soon in {self.main_loc} and the current champion is {self.main_char}. I pay you a hefty sum to win this race, if you can't win, at least end ina higher position than {self.main_char}."
+            elif text_definer == 'Ridge Racing!':
+                brief = f"A new race will start soon in {self.main_loc} and the current champion is {self.main_char}. I pay you a hefty sum to win this race, if you can't win, at least end in a higher position than {self.main_char}."
                 condition = f"Win the race."
                 return brief, condition
             elif text_definer == 'Dance Battle!':
@@ -416,7 +416,7 @@ class Mission (Details):
                 return brief, condition
             elif text_definer == 'Hack Database':
                 brief = f"We have found the location to a secret database in {self.main_loc} belonging to {self.main_char}. It can only be breached in person, that's your part in this operation."
-                condition = f"Found the Computer Room."
+                condition = f"Find the Computer Room."
                 return brief, condition
             else:
                 return "Oops, we couldn't generate a mission briefing. Sorry :("                   

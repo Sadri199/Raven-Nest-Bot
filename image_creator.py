@@ -129,16 +129,14 @@ def image_make_4(new_mission):
     position_cond_success = (161,604)
     
     pic_extras = new_mission.this_extra
-    pic_loc = new_mission.main_image
     if pic_extras == "Unknown":
-        if pic_loc != "loc":
-            third_picture = new_mission.main_loc
+        pic_extras = new_mission.main_loc
     else:    
-        third_picture = pic_extras
+        pic_extras
         
     get_pic_1 = imageChooser(new_mission.main_char) #configure the corresponding characters
     get_pic_2 = imageChooser(new_mission.main_req)
-    get_pic_3 = imageChooser(third_picture)
+    get_pic_3 = imageChooser(pic_extras)
     
     image_4.paste(Image.open(get_pic_1), box=(28,78,288,362)) #images of 260 x 284
     image_4.paste(Image.open(get_pic_2), box=(315,78,575,362)) #images of 260 x 284
@@ -155,8 +153,7 @@ def image_make_4(new_mission):
 #################Fourth Template#################    
     
 #################Test#################
-# = Mission()
-
+#new_mission = Mission()
 #image_make_1(new_mission)
 #image_make_2(new_mission)
 #image_make_3(new_mission)
