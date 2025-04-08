@@ -296,7 +296,7 @@ class Mission (Details):
                 return brief, condition 
             elif text_definer == 'Conversation Needed':
                 brief = f"{self.main_char} is very talkative and I run out of things to talk with them. Go to {self.main_loc} and talk with them, even small talk will help."
-                condition = f"Ask them about weather, or something, idk."
+                condition = f"Ask them about something."
                 return brief, condition 
             elif text_definer == 'Group Chat!':
                 brief = f"{self.main_char}'s secret group chat has been discovered. They are planning to bombard the vicinity of {self.main_loc}. Get in there and take screenshots."
@@ -336,11 +336,11 @@ class Mission (Details):
                 return brief, condition
             elif text_definer == 'Rehab "x"':
                 brief = f"{self.main_char} has taken to many {self.addict}, they need help. You accept any type of job right? Help them get detoxified."
-                condition = f"Make them return to the right path."
+                condition = f"Stop their addiction."
                 return brief, condition
             elif text_definer == 'Deliver Drugs!':
                 brief = f"{self.main_char} and I are in party and need some of that, you know, {self.addict}. Can you help us?"
-                condition = f"This is totally legal, trust me."
+                condition = f"Deliver that stuff."
                 return brief, condition
             elif text_definer == 'Mop Up "x"':
                 brief = f"We have heard a rumor that a former {self.main_char}'s facility in {self.main_loc} has recently been visited by an unknown group. Eliminate them ASAP."
