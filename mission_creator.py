@@ -1,6 +1,8 @@
 import random
 
 #################Data#################
+#Online Spreadsheet with all the characters data "https://docs.google.com/spreadsheets/d/1t-B7GP2cDZY3knV8zdc_ChaDlsxSN758WInCJZ19lAM/edit?usp=sharing"
+
 act_char = ['Raven Test','Stop "x"','Remove "x"','Rescue "x"','Pursuit "x"','Guard "x"','Destroy "x"','Arena Battle!','Attack "x"','Eliminate "x"','Disrupt "x"','Protect "x"','Capture "x"','Intercept "x"','Assist "x"','Spy "x"','Training!','Ridge Racing!','Dance Battle!','Twerk Off','Hear "x"','Conversation Needed','Group Chat!','Fishing Competition!','Cooking Tournament!','Drink Competition','Pool Match','Reading Time','Date "x"','Bakery Time!','"x" is High','Rehab "x"','Deliver Drugs!']
 
 act_org = ['Mop Up "x"','Nullify "x"','Chase "x"','Obstruct "x"','Secure "x"','Help "x"','Survey "x"']

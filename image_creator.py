@@ -8,9 +8,6 @@ import textwrap
 #fourth template (new version), each box is 260 x 285 pixels, to keep that in mid
 
 
-#new_mission = Mission()
-#print(new_mission.main_merge)
-
 def mission_wrapper(text):
     wrapped = textwrap.fill(text, width=32)
     return  wrapped    

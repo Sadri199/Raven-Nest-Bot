@@ -1,5 +1,7 @@
+import random
+
 char_dict = {
-    "Goku (Mid)": "img/chars/goku_mid.png",
+    "Goku (Mid)": ["img/chars/goku_mid.png","img/chars/alt/goku_mid_2.png"],
     "Shadow the Hedgehog": "img/chars/shadow_the_hedgehog.png",
     "Dorothy (Nikke)": "img/chars/dorothy.png",
     "Hustler-1": "img/chars/hustler1.png",
@@ -56,7 +58,7 @@ org_dict = {
 req_dict = {
     "Vargskelethor": "img/reqs/varg.png",
     "Miles 'Tails' Prower": "img/reqs/tails.png",
-    "Sugar (Nikke)": "img/reqs/sugar.png",
+    "Sugar (Nikke)": ["img/reqs/sugar.png", "img/reqs/alt/sugar_2.png"],
     "Neromatsu": "", #No picture for now, idk what to put
     "Billy Kid (ZZZ)": "img/reqs/billy_kid.png",
     "Big the Cat": "img/reqs/big.png",
@@ -117,45 +119,70 @@ loc_dict = {
     "The Elmo (GF2)": "img/locs/elmo.png",
 }
 
+
+
 def imageChooser(picture):
+    random_index = random.randrange(0,2)
     if picture in char_dict:
         correct_path = char_dict.get(picture)
-        if correct_path == "":
+        if isinstance(correct_path, list) == True:
+           correct_path = char_dict.get(picture)[random_index]
+           print(f"Yes, {picture} has a picture!")
+           print(correct_path)
+           return correct_path
+        elif isinstance(correct_path, list) == False:
+            correct_path = char_dict.get(picture)
+            print(f"Yes, {picture} has a picture!")
+            print(correct_path)
+            return correct_path
+        elif correct_path == "":
             correct_path = "img/unknown.png"    
-        print("Yes")
+        print(f"Yes, {picture} has a picture!")
         print(correct_path)
         return correct_path
     elif picture in org_dict:
         correct_path = org_dict.get(picture)
         if correct_path == "":
             correct_path = "img/unknown.png"    
-        print("Yes")
+        print(f"Yes, {picture} has a picture!")
         print(correct_path)
         return correct_path
     elif picture in req_dict:
         correct_path = req_dict.get(picture)
-        if correct_path == "":
-            correct_path = "img/unknown.png"    
-        print("Yes")
+        if isinstance(correct_path, list) == True:
+           correct_path = req_dict.get(picture)[random_index]
+           print(f"Yes, {picture} has a picture!")
+           print(correct_path)           
+           return correct_path
+        elif isinstance(correct_path, list) == False:
+            correct_path = req_dict.get(picture)
+            print(f"Yes, {picture} has a picture!")
+            print(correct_path)
+            return correct_path
+        elif correct_path == "":
+            correct_path = "img/unknown.png"      
+        print(f"Yes, {picture} has a picture!")
         print(correct_path)
         return correct_path
     elif picture in extra_dict:
         correct_path = extra_dict.get(picture)
         if correct_path == "":
             correct_path = "img/unknown.png"    
-        print("Yes")
+        print(f"Yes, {picture} has a picture!")
         print(correct_path)
         return correct_path
     elif picture in loc_dict:
         correct_path = loc_dict.get(picture)
         if correct_path == "":
             correct_path = "img/unknown.png"    
-        print("Yes")
+        print(f"Yes, {picture} has a picture!")
         print(correct_path)
         return correct_path
     else:
-        print("No")
+        print(f"No, {picture} doesn't have a picture.")
         correct_path = "img/unknown.png"
         print(correct_path)
         return correct_path
 
+#instance = imageChooser("Goku (Mid)")
+#instance2 = imageChooser("Sugar (Nikke)")
