@@ -389,7 +389,7 @@ class Mission (Details):
                 condition = f"Remove the invaders."
                 return brief, condition
             elif text_definer == 'Infiltrate "x"':
-                brief = f"Raid the base in {self.main_loc}. In order to bypass the security, you must destroy the four energy generators located outside. Good luck."
+                brief = f"Raid {self.main_char}'s base in {self.main_loc}. In order to bypass the security, you must destroy the four energy generators located outside. Good luck."
                 condition = f"Assault the base."
                 return brief, condition
             elif text_definer == 'Search "x"':
@@ -443,5 +443,6 @@ class Mission (Details):
 #print(test_action)
 #print(test_details)
 #print(test_mission.main_merge) #Print certain variables
-#print(test_mission)
+#print(test_mission.main_merge)
+#print(test_mission.mission_text)
 #################Test#################
