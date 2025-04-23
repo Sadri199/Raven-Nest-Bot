@@ -98,13 +98,13 @@ loc_dict = {
     "Isaac City": "img/locs/isaac_city.png",
     "Usea": "img/locs/usea.png",
     "Megafloat (AC)": "img/locs/megafloat.png",
-    "Vihul Spaceport": "", #No pic for now
-    "Zio Matrix's HQ": "", #No pic for now
-    "Murakumo Dome": "", #No pic for now
-    "PROGTECH Factory": "", #No pic for now
-    "Amber Crown": "", #No pic for now
+    "Vilhul Spaceport": "img/locs/vilhul_spaceport.png", 
+    "Zio Matrix's HQ": "img/locs/ziomatrix_hq.png", 
+    "Murakumo Dome": "img/locs/murakumo_dome.png", 
+    "PROGTECH Factory": "img/locs/progtech_factory.png", 
+    "Amber Crown": "img/locs/amber_crown.png", 
     "Trene City": "img/locs/trene.png",
-    "Arena": "", #No pic for now
+    "Arena": "img/locs/arena_pp.png", 
     "Ruglen Lab": "img/locs/ruglen.png",
     "Stonehenge (AC)": "img/locs/stonehenge.png",
     "Megalith (AC)": "img/locs/megalith.png",

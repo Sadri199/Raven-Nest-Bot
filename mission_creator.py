@@ -3,11 +3,11 @@ import random
 #################Data#################
 #Online Spreadsheet with all the characters data "https://docs.google.com/spreadsheets/d/1t-B7GP2cDZY3knV8zdc_ChaDlsxSN758WInCJZ19lAM/edit?usp=sharing"
 
-act_char = ['Raven Test','Stop "x"','Remove "x"','Rescue "x"','Pursuit "x"','Guard "x"','Destroy "x"','Arena Battle!','Attack "x"','Eliminate "x"','Disrupt "x"','Protect "x"','Capture "x"','Intercept "x"','Assist "x"','Spy "x"','Training!','Ridge Racing!','Dance Battle!','Twerk Off','Hear "x"','Conversation Needed','Group Chat!','Fishing Competition!','Cooking Tournament!','Drink Competition','Pool Match','Reading Time','Date "x"','Bakery Time!','"x" is High','Rehab "x"','Deliver Drugs!']
+act_char = ['Raven Test','Stop "x"','Remove "x"','Rescue "x"','Pursuit "x"','Guard "x"','Destroy "x"','Arena Battle!','Attack "x"','Eliminate Target!','Disrupt "x"','Protect "x"','Capture "x"','Intercept Target!','Assist "x"','Spy "x"','Training!','Ridge Racing!','Dance Battle!','Twerk Off','Hear "x"','Conversation Needed','Group Chat!','Fishing Competition!','Cooking Tournament!','Drink Competition','Pool Match','Reading Time','Date "x"','Bakery Time!','"x" is High','Rehab "x"','Deliver Drugs!']
 
-act_org = ['Mop Up "x"','Nullify "x"','Chase "x"','Obstruct "x"','Secure "x"','Help "x"','Survey "x"']
+act_org = ['Mop Up "x"','Nullify "x"','Chase "x"','Obstruct Transportation','Secure "x"','Help "x"','Survey "x"']
 
-act_loc = ['Recon "x"','Hinder "x"','Preserve "x"','Regain "x" ','Infiltrate "x"','Search "x"','Defend "x"','Retake "x"','Observe "x"','Assault "x"','Enter "x"','Hack Database']
+act_loc = ['Recon "x"','Hinder "x"','Preserve Warehouse','Regain "x" ','Infiltrate the Secret Base!','Search "x"','Defend "x"','Retake "x"','Observe "x"','Assault "x"','Enter "x"','Hack Database']
 
 objective_list = ["Goku (Mid)", "Shadow the Hedgehog", "Dorothy (Nikke)", "Hustler-1", "Nemo (AC)", "Gohan Calvo", "Rena Hirose (AC)", "Asterix", "Obelix", "Leos Klein", "Stinger", "Phoenix (AC)", "Malcolm (UT)", "Abyssal Dision", "Mobius-1", "Blaze (AC)", "Blaze the Cat", "Ezio Auditore", "Kapura", "Tom Nook", "SpongeBob", "JC Denton", "Adam Jensen", "Albert Wesker", "Colgate", "Krolik", "Nemesis (GF2)", "Red Shoes (Nikke)", "Prof. Hojo", "Yoshimitsu", "SHODAN"] #Can't be longer than 20 characters!
 
@@ -20,7 +20,7 @@ requester_list.extend(organization_list)
 
 extra_enemies = ["MT", "Stinger", "Nine Ball", "Rapture (Nikke)", "Gun Hunter (Sonic)", "Frieza Soldier", "Saibaman", "R-101", "Su-37", "Disorder Unit", "Goomba", "Chuckya", "Arkbird (AC)"]
 
-locations = ["Montevideo", "Kame House", "Space Colony ARK", "The Ark (Nikke)", "Zam City", "Isaac City", "Usea", "Megafloat (AC)", "Vihul Spaceport", "Zio Matrix's HQ", "Murakumo Dome", "PROGTECH Factory", "Amber Crown", "Trene City", "Arena", "Ruglen Lab", "Stonehenge (AC)", "Megalith (AC)", "Facing Worlds", "Area 51", "Chemical Plant", "Midgar", "Moonlit Wilderness", "Hell, MI", "Island (AC)", "Astral Express", "The Elmo (GF2)", ] #Can't be longer than 16 characters!
+locations = ["Montevideo", "Kame House", "Space Colony ARK", "The Ark (Nikke)", "Zam City", "Isaac City", "Usea", "Megafloat (AC)", "Vilhul Spaceport", "Zio Matrix's HQ", "Murakumo Dome", "PROGTECH Factory", "Amber Crown", "Trene City", "Arena", "Ruglen Lab", "Stonehenge (AC)", "Megalith (AC)", "Facing Worlds", "Area 51", "Chemical Plant", "Midgar", "Moonlit Wilderness", "Hell, MI", "Island (AC)", "Astral Express", "The Elmo (GF2)", ] #Can't be longer than 16 characters!
 
 titles = ["CEO", "President", "Super Saiyan", "Pokemon Trainer", "Nine Breaker", "Stripper", "Paladin", "Fisherman", "Scammer", "Priest", "A Demon of Razgriz"]
 
@@ -248,7 +248,7 @@ class Mission (Details):
                 brief = f"I've sent out a mission request to {self.main_char}. The request I sent out, was for the removal of MTs attacking the Construction Site in {self.main_loc}. Your objective is to eliminate {self.main_char}."
                 condition = f"Kill the target."
                 return brief, condition
-            elif text_definer == 'Eliminate "x"':
+            elif text_definer == 'Eliminate Target!':
                 brief = f"We've relocated our Chief Scientist to our Corporate HQ in {self.main_loc}, but the building is now under attack. The intruder is {self.main_char}. We have no time to waste. Take them out."
                 condition = f"Finish the target."
                 return brief, condition
@@ -264,7 +264,7 @@ class Mission (Details):
                 brief = f"We have been informed that a high ranking official will be visiting {self.main_char}'s facility in {self.main_loc}. Arrive there and capture them."
                 condition = f"Detain the target."
                 return brief, condition
-            elif text_definer == 'Intercept "x"':
+            elif text_definer == 'Intercept Target!':
                 brief = f"THIS IS AN URGENT MESSAGE. {(self.main_char).upper()} HAS DISCOVERED THE LOCATION OF OUR BASE IN {(self.main_loc).upper()}. THEY WILL BE ARRIVING QUICKLY. YOU MUST ASSIST US."
                 condition = f"Halt their actions."
                 return brief, condition
@@ -313,7 +313,7 @@ class Mission (Details):
                 condition = f"Make that spaghetti."
                 return brief, condition
             elif text_definer == 'Drink Competition':
-                brief = f"{self.main_char} is having a bad day and to cheer them up they are taking shots of {self.drink}. I cannot accompany them but we can't leave a person drinking alone. You should do it, c'mon, I'll even pay you a bit."
+                brief = f"{self.main_char} is having a bad day and to cheer them up they are taking shots of {self.drink}. I cannot be with them but we can't leave a person drinking alone. You do it, c'mon, I'll even pay you a bit."
                 condition = f"Don't drive after drinking."
                 return brief, condition
             elif text_definer == 'Pool Match':
@@ -356,7 +356,7 @@ class Mission (Details):
                 brief = f"A sample of a new material was stolen from one of our labs in {self.main_loc}. Please track down {self.main_char} and eliminate them. There's no need to recover the sample. Good luck."
                 condition = f"Eliminate all targets."
                 return brief, condition
-            elif text_definer == 'Obstruct "x"':
+            elif text_definer == 'Obstruct Transportation':
                 brief = f"We want you to disrupt {self.main_char}'s Project Phantasma related shipping lines in the zone of {self.main_loc}.The targets are the {self.main_char}'s transport vehicles. Good Luck."
                 condition = f"Capture the vehicles."
                 return brief, condition
@@ -380,7 +380,7 @@ class Mission (Details):
                 brief = f"We have decided to carry out an operation intended to occupy {self.main_char}'s base of activities in {self.main_loc}. Our First Division has already begun fighting. Your mission is to support our troops."
                 condition = f"Assault the base."
                 return brief, condition
-            elif text_definer =='Preserve "x"':
+            elif text_definer =='Preserve Warehouse':
                 brief = f"We want you to guard a new type of radar for ACs that we have developed. A prototype model is stored in a warehouse at {self.main_loc}. There is a good chance that {self.main_char} agents sabotaged the system."
                 condition = f"Protect the AC part."
                 return brief, condition
@@ -388,7 +388,7 @@ class Mission (Details):
                 brief = f"We just got a terrifying message from {self.main_char}. They said that they are occupying {self.main_loc}'s base. Their demands are for the immediate dismantling of {self.main_req} base. Eliminate them quickly."
                 condition = f"Remove the invaders."
                 return brief, condition
-            elif text_definer == 'Infiltrate "x"':
+            elif text_definer == 'Infiltrate the Secret Base!':
                 brief = f"Raid {self.main_char}'s base in {self.main_loc}. In order to bypass the security, you must destroy the four energy generators located outside. Good luck."
                 condition = f"Assault the base."
                 return brief, condition

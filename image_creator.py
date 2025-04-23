@@ -150,9 +150,9 @@ def image_make_4(new_mission):
 #################Fourth Template#################    
     
 #################Test#################
-#new_mission = Mission()
-#image_make_1(new_mission)
-#image_make_2(new_mission)
-#image_make_3(new_mission)
-#image_make_4(new_mission)
+new_mission = Mission()
+image_make_1(new_mission)
+image_make_2(new_mission)
+image_make_3(new_mission)
+image_make_4(new_mission)
 ##################Test#################
