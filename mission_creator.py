@@ -302,7 +302,7 @@ class Mission (Details):
                 return brief, condition 
             elif text_definer == 'Group Chat!':
                 brief = f"{self.main_char}'s secret group chat has been discovered. They are planning to bombard the vicinity of {self.main_loc}. Get in there and take screenshots."
-                condition = f"This will never happen in real life."
+                condition = f"Journalism 101"
                 return brief, condition 
             elif text_definer == 'Fishing Competition!':
                 brief = f'I am making a Fishing Competition, because you know my motto: "Woman want me, Fish fear me". It is all about that bass life and no one knows it more than {self.main_char}. Are you ready to bass it up at {self.main_loc}?'
